@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNG Reserve Services</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+    color: #111827;
+  }
+
+  section {
+    padding: 80px 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2, h3 {
+    margin: 0 0 16px;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+
+  @media(min-width: 768px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media(min-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .feature-card {
+    background-color: white;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 24px;
+    transition: transform 0.2s;
+  }
+
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1);
+  }
+
+  .stats-section {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    padding: 48px 32px;
+    margin-bottom: 80px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  @media(min-width: 1024px) {
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #22c55e;
+    margin-bottom: 8px;
+  }
+
+  .cta-section {
+    background: linear-gradient(to right, #16a34a, #3b82f6);
+    color: white;
+    border-radius: 20px;
+    padding: 60px 32px;
+    text-align: center;
+  }
+
+  .cta-section h3 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    font-size: 18px;
+    color: #d1fae5;
+    max-width: 700px;
+    margin: 0 auto 32px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  @media(min-width: 640px) {
+    .cta-buttons {
+      flex-direction: row;
+    }
+  }
+
+  .btn-primary {
+    background-color: #facc15;
+    color: #111827;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: #fbbf24;
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover {
+    background-color: white;
+    color: #16a34a;
+  }
+
+  /* Feature colors */
+  .blue { background-color: #3b82f6; }
+  .green { background-color: #16a34a; }
+  .purple { background-color: #8b5cf6; }
+  .orange { background-color: #f97316; }
+  .red { background-color: #ef4444; }
+  .yellow { background-color: #facc15; }
+</style>
+</head>
+<body>
+
+<section>
+  <div class="container">
+    <!-- Header -->
+    <div class="text-center" style="margin-bottom:64px;">
+      <h2 style="font-size:36px; font-weight:bold;">Why Choose CNG Reserve?</h2>
+      <p style="font-size:18px; color:#4b5563; max-width:700px; margin:16px auto 0;">
+        Experience the future of CNG refueling with our comprehensive reservation system
+        designed to save your time and enhance your driving experience.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon blue">⏰</div>
+        <h3>Time Slot Booking</h3>
+        <p>Reserve your preferred time slot and avoid waiting in long queues</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon green">📍</div>
+        <h3>Station Locator</h3>
+        <p>Find the nearest CNG stations with real-time availability</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon purple">🛡️</div>
+        <h3>Secure Payments</h3>
+        <p>Safe and encrypted payment processing for your reservations</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon orange">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>Book and manage reservations on-the-go with our responsive design</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon red">🎧</div>
+        <h3>24/7 Support</h3>
+        <p>Round-the-clock customer support for all your queries</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon yellow">⭐</div>
+        <h3>Premium Experience</h3>
+        <p>Enjoy priority service and exclusive benefits with our platform</p>
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+      <div class="text-center">
+        <h3>Trusted by Thousands</h3>
+        <p style="color:#4b5563;">Join our growing community of satisfied customers</p>
+      </div>
+      <div class="stats-grid">
+        <div>
+          <div class="stat-number">50+</div>
+          <div>CNG Stations</div>
+        </div>
+        <div>
+          <div class="stat-number">10K+</div>
+          <div>Happy Customers</div>
+        </div>
+        <div>
+          <div class="stat-number">24/7</div>
+          <div>Support Available</div>
+        </div>
+        <div>
+          <div class="stat-number">99.9%</div>
+          <div>Uptime Guarantee</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <h3>Ready to Start Saving Time?</h3>
+      <p>Join thousands of drivers who have already made the switch to hassle-free CNG refueling.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary">Start Booking</button>
+        <button class="btn-secondary">Learn More</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

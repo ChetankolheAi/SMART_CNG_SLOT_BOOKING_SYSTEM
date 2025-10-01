@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Footer Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0d1117;
+  color: #e6e6e6;
+/* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #16a34a;
+  color: #16a34a;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: #0d1117;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://id-preview--9a53410b-06b4-4cd3-a471-189ee70e5bee.lovable.app/assets/cng-station-hero-BoQZu8mo.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.08; /* faint background image */
+  z-index: 0;
+}
+
+.hero-text,
+.reservation-form {
+  position: relative;
+  z-index: 1;
+
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.highlight {
+  color: #16a34a;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+.stats div {
+  text-align: left;
+  font-size: 20px;
+}
+.stats strong{
+  color: rgb(2, 157, 2);
+}
+
+/* Reservation Form */
+
+
+.station-info i {
+  color: #decc00;
+  margin-right: 6px;
+}
+
+/* Status */
+.status {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.status .open {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tags span {
+  background: #334155;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #f1f5f9;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.reserve-btn {
+  flex: 1;
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.reserve-btn:hover {
+  background: #16a34a;
+}
+
+.map-btn {
+  width: 45px;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  background: #1e293b;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #f8fafc;
+}
+
+.map-btn:hover {
+  background: #334155;
+}
+
+/* View All */
+.view-all {
+  margin-top: 40px;
+}
+
+.view-all button {
+  background: transparent;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.view-all button:hover {
+  background: #22c55e;
+  color: white;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  max-width: 500px;
+  background-color: #161b22;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  text-align: left;
+  color: #e6e6e6;
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* Footer Styles */
+.footer {
+  background: #0d1117;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+    font-size: 16px;
+    list-style: none;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-about{
+  margin-right: 40px;
+}
+.footer-about h4{
+  margin-top: 40px;
+  font-size: 20px;
+}
+.footer-about,
+.footer-links,
+.footer-services,
+.footer-contact {
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  color: #ffffff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.footer-logo span {
+  color: #00c853;
+}
+
+.footer-about p {
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.footer-socials a {
+  color: #bbb;
+  margin-right: 12px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-links a,
+.footer-services a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-services a:hover,
+.footer-policy a:hover,
+.footer-socials a:hover {
+  color: #00c853;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  color: #bbb;
+  margin: 10px 13px;
+}
+.footer-contact ul{
+  display: flex;
+  align-items: center;
+}
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 20px;
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-policy a {
+  color: #bbb;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 13px;
+}
+.stats-banner {
+  background: linear-gradient(90deg , rgb(12, 12, 12), rgb(4, 0, 23)); /* light gray */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.stats-container {
+  background: linear-gradient(90deg , rgb(0, 0, 0),rgb(7, 0, 44));;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.stats-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.stats-container p {
+  font-size: 1rem;
+  color: #8b8b8b;
+  margin-bottom: 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+}
+
+.stat-item h3 {
+  color: #16a34a; /* green highlight */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  color: #7c7c7c;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .stats {
+    justify-content: space-between;
+  }
+
+  .date-time {
+    flex-direction: column;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+  
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+    </style>
+</head>
+<body>
+    <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo & About -->
+    <div class="footer-about">
+      <h3 class="footer-logo">
+        <span><i class="fa-solid fa-gas-pump"></i> </span>_BookMyCNG
+      </h3>
+      <p>
+        The most convenient way to reserve your CNG refueling slots and skip the wait times.
+      </p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+      <h4>BookMyCNG</h4>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Find Stations</a></li>
+        <li><a href="#">Book Reservation</a></li>
+        <li><a href="#">My Bookings</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Help Center</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-services">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">CNG Reservation</a></li>
+        <li><a href="#">Station Locator</a></li>
+        <li><a href="#">Mobile App</a></li>
+        <li><a href="#">Fleet Solutions</a></li>
+        <li><a href="#">API Integration</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      
+     
+      <ul><i class="fa-solid fa-phone"></i> <p>+91 98765 43210</p></ul>
+      <ul><i class="fa-solid fa-envelope"></i> <p>support@BookMyCNG.com</p></ul>
+      <ul><i class="fa-solid fa-location-dot"></i> <p>123 Green Energy Plaza,<br>Sector 15, New Delhi - 110001</p></ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 Book My CNG . All rights reserved.</p>
+    <div class="footer-policy">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

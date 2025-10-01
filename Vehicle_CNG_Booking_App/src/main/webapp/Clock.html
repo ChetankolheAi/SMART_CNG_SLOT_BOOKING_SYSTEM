@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Neon Clock</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .clock-container {
+    	margin-top:40px;
+      text-align: center;
+      padding: 30px;
+      
+    }
+
+    #time {
+      font-size: 60px;
+      font-weight: bold;
+      color: #00ff66;
+      text-shadow: 0 0 20px #00ff66;
+    }
+
+    #date {
+      font-size: 20px;
+      margin-top: 8px;
+      color: #aaa;
+      text-shadow: 0 0 10px rgba(0, 255, 100, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="clock-container">
+    <div id="time">00:00:00</div>
+    <div id="date">Loading date...</div>
+  </div>
+
+  <script>
+    function updateClock() {
+      let now = new Date();
+
+      // Format time
+      let hours = now.getHours().toString().padStart(2, "0");
+      let minutes = now.getMinutes().toString().padStart(2, "0");
+      let seconds = now.getSeconds().toString().padStart(2, "0");
+      let timeString = `${hours}:${minutes}:${seconds}`;
+
+      // Format date
+      let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      let dateString = now.toLocaleDateString("en-IN", options);
+
+      // Update DOM
+      document.getElementById("time").textContent = timeString;
+      document.getElementById("date").textContent = dateString;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
+

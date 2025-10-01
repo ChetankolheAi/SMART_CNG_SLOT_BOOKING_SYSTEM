@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Vehicle_CNG_Booking_App</display-name>
+  <welcome-file-list>
+    <welcome-file>Home1.jsp</welcome-file>
+
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Admin</display-name>
+    <servlet-name>Admin</servlet-name>
+    <servlet-class>CngBooking.Admin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Admin</servlet-name>
+    <url-pattern>/Admin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CngPumpLogin</display-name>
+    <servlet-name>CngPumpLogin</servlet-name>
+    <servlet-class>CngBooking.CngPumpLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CngPumpLogin</servlet-name>
+    <url-pattern>/CngPumpLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CngRegistration</display-name>
+    <servlet-name>CngRegistration</servlet-name>
+    <servlet-class>CngBooking.CngRegistration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CngRegistration</servlet-name>
+    <url-pattern>/CngRegistration</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ULogin</display-name>
+    <servlet-name>ULogin</servlet-name>
+    <servlet-class>CngBooking.ULogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ULogin</servlet-name>
+    <url-pattern>/ULogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserRegister</display-name>
+    <servlet-name>UserRegister</servlet-name>
+    <servlet-class>CngBooking.UserRegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserRegister</servlet-name>
+    <url-pattern>/UserRegister</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateCNG</display-name>
+    <servlet-name>UpdateCNG</servlet-name>
+    <servlet-class>CngBooking.UpdateCNG</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateCNG</servlet-name>
+    <url-pattern>/UpdateCNG</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Approve</display-name>
+    <servlet-name>Approve</servlet-name>
+    <servlet-class>CngBooking.Approve</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Approve</servlet-name>
+    <url-pattern>/Approve</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserBooking</display-name>
+    <servlet-name>UserBooking</servlet-name>
+    <servlet-class>CngBooking.UserBooking</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserBooking</servlet-name>
+    <url-pattern>/UserBooking</url-pattern>
+  </servlet-mapping>
+
+  
+  <servlet>
+    <description></description>
+    <display-name>UserBook</display-name>
+    <servlet-name>UserBook</servlet-name>
+    <servlet-class>CngBooking.UserBooking</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserBook</servlet-name>
+    <url-pattern>/UserBook</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UBooking</display-name>
+    <servlet-name>UBooking</servlet-name>
+    <servlet-class>CngBooking.UBooking</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UBooking</servlet-name>
+    <url-pattern>/UBooking</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PumpDataServlet</servlet-name>
+    <servlet-class>CngBooking.PumpDataServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>PumpDataServlet</servlet-name>
+    <url-pattern>/getPumps</url-pattern>
+</servlet-mapping>
+  <servlet>
+    <servlet-name>PumpOrders</servlet-name>
+    <servlet-class>CngBooking.PumpOrders</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>PumpOrders</servlet-name>
+    <url-pattern>/PumpOrders</url-pattern>
+</servlet-mapping>
+  
+    <!-- JWT Authentication Filter -->
+  <filter>
+    <filter-name>JWTAuthFilter</filter-name>
+    <filter-class>CngBooking.JWTAuthFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>JWTAuthFilter</filter-name>
+    <!-- Protect all URLs under UserDash -->
+    <url-pattern>/UserDash/*</url-pattern>
+  </filter-mapping>
+  
+</web-app>
