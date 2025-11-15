@@ -124,9 +124,9 @@ const steps = document.querySelectorAll(".step");
 
     doc.setFont("helvetica", "normal");
     doc.setFontSize(12);
-    doc.text("GreenFuel Charging Station", 20, 35);
-    doc.text("123 EV Street, Smart City", 20, 42);
-    doc.text("(+91) 98765-43210", 20, 49);
+    doc.text("BookMyCNG ", 20, 35);
+    doc.text("Head Office: Narhe, Pune", 20, 42);
+    doc.text("(+91) 7020411002", 20, 49);
 
     // Line
     doc.line(20, 55, 190, 55);
